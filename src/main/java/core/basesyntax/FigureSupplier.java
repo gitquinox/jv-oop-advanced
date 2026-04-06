@@ -5,20 +5,19 @@ import java.util.Random;
 public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
+    private final int RANDOM_NUMBER = random.nextInt(10) + 1;
 
     public Figure getRandomFigure() {
         int figureType = random.nextInt(5);
         String randomColor = colorSupplier.getRandomColor();
 
         return switch (figureType) {
-            case 0 -> new Circle(randomColor, random.nextInt(10) + 1);
-            case 1 -> new Square(randomColor, random.nextInt(10) + 1);
-            case 2 -> new RightTriangle(randomColor, random.nextInt(10) + 1,
-                    random.nextInt(10) + 1);
-            case 3 -> new Rectangle(randomColor, random.nextInt(10) + 1,
-                    random.nextInt(10) + 1);
-            default -> new IsoscelesTrapezoid(randomColor, random.nextInt(10) + 1,
-                    random.nextInt(10) + 1, random.nextInt(10) + 1, random.nextInt(10) + 1);
+            case 0 -> new Circle(randomColor, RANDOM_NUMBER);
+            case 1 -> new Square(randomColor, RANDOM_NUMBER);
+            case 2 -> new RightTriangle(randomColor, RANDOM_NUMBER, RANDOM_NUMBER);
+            case 3 -> new Rectangle(randomColor, RANDOM_NUMBER, RANDOM_NUMBER);
+            default -> new IsoscelesTrapezoid(randomColor,
+                    RANDOM_NUMBER, RANDOM_NUMBER, RANDOM_NUMBER, RANDOM_NUMBER);
         };
     }
 

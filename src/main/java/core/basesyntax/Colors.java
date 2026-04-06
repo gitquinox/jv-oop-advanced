@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public enum Colors{
+public enum Colors {
     WHITE,
     BLACK,
     RED,
@@ -12,7 +12,7 @@ public enum Colors{
     BROWN,
     GREY;
 
-    public String getName(){
+    public String getName() {
         return this.name().toLowerCase();
     }
 }

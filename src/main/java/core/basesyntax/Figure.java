@@ -1,15 +1,9 @@
 package core.basesyntax;
 
-public class Figure implements Drawable{
-    String color;
+public abstract class Figure implements Drawable {
+    protected final String color;
 
     public Figure(String color) {
         this.color = color;
-    }
-
-
-    @Override
-    public String draw() {
-        return "";
     }
 }
